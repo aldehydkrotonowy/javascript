@@ -1,0 +1,107 @@
+.big-article-tile {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 500px;
+  background-image: linear-gradient(to bottom, rgba(0, 173, 255, 0.4), rgba(0, 173, 255, 0));
+
+  .article-img {
+    position: absolute;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+  }
+  .footer-infos {
+    position: absolute;
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    border-top: 1px solid color(azure);
+    width: 100%;
+    height: 185px;
+    background-color: rgba(0, 20, 60, 0.65);
+
+    .content-wrapper {
+      position: relative;
+      padding-top: 2em;
+      max-width: 600px;
+      color: #FFF;
+      h2.title {
+        font-size: 20px;
+      }
+      h4.related-text {
+        margin-top: 2.5em;
+        font-size: 13px;
+        width: 37%;
+        opacity: 0.95;
+      }
+      .button-wrapper {
+        position: relative;
+        top: -2em;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+
+        .button {
+          width: 108px;
+          height: 40px;
+          border-radius: 2px;
+          background-color: color(yellow);
+          border: none;
+          color: color(navy);
+        }
+      }
+      .continue-reading-link {
+        position: relative;
+        top: -2em;
+        font-size: 13px;
+        font-weight: bold;
+        font-style: normal;
+        color: color(azure);
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+.big-article-tile.title-only {
+  .footer-infos > .content-wrapper {
+    h4.related-text { visibility: hidden; }
+    .button-wrapper { display: none; }
+
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  .big-article-tile {
+    .footer-infos {
+      height: 170px;
+      background-color: transparent;
+      background-image: linear-gradient(to top, rgba(0, 173, 255, 0.4), rgba(0, 173, 255, 0)), linear-gradient(to bottom, rgba(0, 0, 0, 0), #000000), linear-gradient(rgba(0, 20, 60, 0.5), rgba(0, 20, 60, 0.5));
+      .content-wrapper {
+        margin: 16px;
+        h2.title {
+          font-size: 16px;
+        }
+        h4.related-text {
+          margin-top: 1.5em;
+          width: 182px;
+          height: 34px;
+
+        }
+        .button-wrapper {
+          top: -3em;
+          justify-content: flex-end;
+          .button {
+            width: 82px;
+          }
+        }
+      }
+    }
+  }
+}

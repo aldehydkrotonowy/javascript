@@ -1,0 +1,12 @@
+@import 'styleutils/colors.scss';
+
+.navbarContainer {
+    background: $navbar-background;
+    height: 2.5em;
+    padding: 1em 0em 1em 0em;
+    font-family: 'Open Sans', sans-serif;
+    color: $navbar-font-color;
+    display: grid;
+    grid-template-columns: 30px 64px calc(100% - 30px - 64px);
+    grid-template-rows: 2em;
+}

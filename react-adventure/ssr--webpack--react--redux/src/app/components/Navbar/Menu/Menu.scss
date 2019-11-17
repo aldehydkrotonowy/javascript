@@ -1,0 +1,39 @@
+@import 'styleutils/colors.scss';
+// %container {
+
+// }
+
+.container {
+    // @extend %container;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-content: center;
+    
+    .menuBar {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-column: 2 / 3;
+        grid-gap: 15px;
+    }
+
+    .link {
+        color: $navbar-link-text;
+        text-decoration: none;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 300;
+        font-size: 1.3em;
+        height: 40px;
+        width: 110px;
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        border: 1px solid $navbar-link-border;
+        border-radius: 0px;
+    
+        &:hover{
+            border: 1px solid $navbar-font-color;
+            color: $navbar-font-color;
+        }
+    }
+}
+

@@ -1,0 +1,22 @@
+.chevron-up {
+  /* back to top icon */
+  display: inline-block;
+  padding: 0 8px 1px 8px;
+  transform: rotate(-180deg);
+
+  @mixin chevron-sub($rot) {
+    display: inline-block;
+    background-color: #ffffff;
+    width: 9px; height: 2px;
+    margin: 0 -2px;
+    transform: rotate($rot);
+  }
+  &::before {
+    @include chevron-sub(45deg);
+    content: " ";
+  }
+  &::after {
+    @include chevron-sub(-45deg);
+    content: " ";
+  }
+}

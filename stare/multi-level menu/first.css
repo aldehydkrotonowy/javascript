@@ -1,0 +1,109 @@
+* { 
+    font-family: 'Open Sans',sans-serif;   
+    box-sizing: border-box;
+    padding: 0;
+    padding: 0;
+    margin: 0;
+    position:static;
+    font-size: 16px;
+}
+.basic-background{
+    background: url("img/background.png");
+}
+.header-menu{
+    margin: 5px;
+    padding: 10px;
+    color: greenyellow;
+}
+.rounded-bottom{
+    border-top-style: none;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-width: 1px;
+    border-radius: 0px 0px 5px 5px;
+    border-color: blue;
+}
+header{
+    background: pink;
+    height:150px;
+}
+.container{
+    margin: 0 auto;
+    width:90%;
+    /*border: 1px solid black;*/
+}
+.header-background{
+background: rgba(4,31,110,1);
+background: -moz-linear-gradient(top, rgba(4,31,110,1) 0%, rgba(9,19,69,1) 90%, rgba(9,19,69,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(4,31,110,1)), color-stop(90%, rgba(9,19,69,1)), color-stop(100%, rgba(9,19,69,1)));
+background: -webkit-linear-gradient(top, rgba(4,31,110,1) 0%, rgba(9,19,69,1) 90%, rgba(9,19,69,1) 100%);
+background: -o-linear-gradient(top, rgba(4,31,110,1) 0%, rgba(9,19,69,1) 90%, rgba(9,19,69,1) 100%);
+background: -ms-linear-gradient(top, rgba(4,31,110,1) 0%, rgba(9,19,69,1) 90%, rgba(9,19,69,1) 100%);
+background: linear-gradient(to bottom, rgba(4,31,110,1) 0%, rgba(9,19,69,1) 90%, rgba(9,19,69,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#041f6e', endColorstr='#091345', GradientType=0 );
+}
+.nav-background{
+    background: rgba(49,102,59,1);
+background: -moz-linear-gradient(top, rgba(49,102,59,1) 0%, rgba(10,69,24,1) 90%, rgba(10,69,24,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(49,102,59,1)), color-stop(90%, rgba(10,69,24,1)), color-stop(100%, rgba(10,69,24,1)));
+background: -webkit-linear-gradient(top, rgba(49,102,59,1) 0%, rgba(10,69,24,1) 90%, rgba(10,69,24,1) 100%);
+background: -o-linear-gradient(top, rgba(49,102,59,1) 0%, rgba(10,69,24,1) 90%, rgba(10,69,24,1) 100%);
+background: -ms-linear-gradient(top, rgba(49,102,59,1) 0%, rgba(10,69,24,1) 90%, rgba(10,69,24,1) 100%);
+background: linear-gradient(to bottom, rgba(49,102,59,1) 0%, rgba(10,69,24,1) 90%, rgba(10,69,24,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#31663b', endColorstr='#0a4518', GradientType=0 );
+}
+.main-navigation{
+    padding: 0;
+    margin: 0;
+    font-weight: 600;
+    letter-spacing: 1px;
+    
+}
+.main-navigation>li:last-child{
+    float: right;
+}
+.main-navigation li{
+
+    list-style: none;
+    display: inline-block;
+    position:relative;    
+}
+.main-navigation li  a:after { margin-left: 5px; content: '\25BA'; float:right; }
+.main-navigation li > a:only-child:after { margin-left: 0; content: ''; }
+.main-navigation li a{
+    padding: 0.9em;
+    display:block;    
+    color: white;
+    text-decoration: none;
+}
+.main-navigation li:hover>ul{
+    display: block;
+    position:absolute;
+}
+.main-navigation li ul{
+    display: none;
+    min-width: 100%; /*second level menu as wide as parent */
+    width: auto; /*or wider than parent when content needs this*/
+}
+.main-navigation li:hover {
+background: #d65720;
+background: -moz-linear-gradient(top, #d65720 0%, #a1401a 53%, #993c17 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, #d65720), color-stop(53%, #a1401a), color-stop(100%, #993c17));
+background: -webkit-linear-gradient(top, #d65720 0%, #a1401a 53%, #993c17 100%);
+background: -o-linear-gradient(top, #d65720 0%, #a1401a 53%, #993c17 100%);
+background: -ms-linear-gradient(top, #d65720 0%, #a1401a 53%, #993c17 100%);
+background: linear-gradient(to bottom, #d65720 0%, #a1401a 53%, #993c17 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d65720', endColorstr='#993c17', GradientType=0 );
+}
+.main-navigation li:hover li{    
+    white-space: nowrap;
+    display:block;
+    background: #aa4518;
+    border-bottom: 1px solid black;
+}
+.main-navigation ul ul{
+    left:100%;
+    top:0;
+}
+.main-navigation li:hover li a:hover { background: #2c3e50; }

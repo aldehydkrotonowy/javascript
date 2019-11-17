@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<title>TOOD app</title>	
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>	
+	<div class="container">
+
+<!-- Modal - -->
+<div class="modal fade" id="myLoginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog modal-md " role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel"><b>Enter your login and password</b></h4>
+      </div>
+      <div class="modal-body">
+	      <form id="loginForm" class="form-horizontal"  method="POST" role="login">
+      		<div class="form-group">
+					  <label class="col-md-4 control-label" for="textinput">Login</label>  
+					  <div class="col-md-6 input-group">
+					  <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+					  <input id="username" name="login" type="text" placeholder="Enter login" class="form-control input-md">
+					  </div>
+					</div>					
+					<!-- Password input-->
+					<div class="form-group">
+					  <label class="col-md-4 control-label" for="passwordinput">Password</label>
+					  <div class="col-md-6 input-group">
+					  	<span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+					    <input id="password" name="password" type="password" placeholder="Enter password" class="form-control input-md ">  
+					  </div>
+
+						<!-- show message structure if login or password is not acceptable-->
+						<div id="loginpassword-infoContainer" class="">
+							<div class='col-md-4'></div>		
+							<div id="loginFeild" class="col-md-6 input-group">
+									<!-- dynamic error message here -->
+							</div>	
+						</div>
+
+					</div>
+				</form>
+      </div>
+      <div class="modal-footer">
+        <button type="button"  class="btn btn-default" data-dismiss="modal">Close</button>
+        <button id="loginButton" type="button" form="loginForm" class="btn btn-primary">Login</button>
+      </div>
+    </div>
+  </div>
+</div><!--login modal end-->
+<!-- =========================================================- -->
+
+<div class="modal fade" id="myAccCreatenModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog modal-md " role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel"><b>Enter details to create account</b></h4>
+      </div>
+      <div class="modal-body">
+
+			<form id="createAccForm" class="form-horizontal" name="createAccount"  method="POST" role="createAccount">
+				<fieldset>
+					<!-- ================================================================= -->
+					<div class="form-group" id="form-group-name">					
+						<label class="col-md-4 control-label" for="textinput">Name</label>
+						<div class="col-md-6 input-group" id="nameInput">
+							<span class="input-group-addon"><span class="glyphicon glyphicon-pencil"></span></span>
+							<input id="i_name" name="name" type="text" placeholder="name" class="form-control input-md">
+							<span id="s_name-WarningGlyph"><!-- glyphicon here --></span>		
+						</div>
+
+						<!-- show message structure if name is not acceptable-->
+						<div id="name-infoContainer" class="">
+							<div class='col-md-4'></div>		
+							<div id="name_infoText" class="col-md-6 input-group">
+									<!-- dynamic error message here -->
+							</div>	
+						</div>
+
+					
+					</div>
+					<!-- ================================================================= -->
+					<div class="form-group" id="form-group-surname">
+						<label class="col-md-4 control-label" for="textinput">Surname</label>
+						<div class="col-md-6 input-group">
+							<span class="input-group-addon"><span class="glyphicon glyphicon-pencil"></span></span>
+							<input id="i_surname" name="surname" type="text" placeholder="surname" class="form-control input-md">
+							<span id="s_surname-WarningGlyph"><!-- glyphicon here --></span>	
+						</div>
+
+						<!-- show message structure if surname is not acceptable-->
+						<div id="surname-infoContainer" class="">
+							<div class='col-md-4'></div>
+							<div id="surname_infoText" class="col-md-6 input-group">
+									<!-- dynamic error message here -->
+							</div>			
+						</div>
+
+					</div>
+
+					
+					<!-- ================================================================= -->
+					<div class="form-group" id="form-group-age">
+						<label class="col-md-4 control-label" for="textinput">Age</label>
+						<div class="col-md-6 input-group">
+							<span class="input-group-addon"><span class="glyphicon glyphicon-pencil"></span></span>
+							<input id="i_age" name="age" type="text" placeholder="age" class="form-control input-md">
+							<span id="s_age-WarningGlyph"><!-- glyphicon here --></span>
+						</div>
+
+						<!-- show message structure if age is not acceptable-->
+						<div id="age-infoContainer" class="">
+							<div class='col-md-4'></div>
+							<div id="age_infoText" class="col-md-6 input-group">
+								<!-- dynamic error message here -->
+							</div>
+						</div>
+
+					</div>
+					<!-- ================================================================= -->
+					<div class="form-group" id="form-group-email">						
+						<label class="col-md-4 control-label" for="textinput">E-mail</label>
+						<div class="col-md-6 input-group">
+						<span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
+						<input id="i_email" name="email" type="text" placeholder="email" class="form-control input-md">
+						<span id="s_email-WarningGlyph"><!-- glyphicon here --></span>
+						</div>
+
+						<!-- show messemail structure if email is not acceptable-->
+						<div id="email-infoContainer" class="">
+							<div class='col-md-4'></div>
+							<div id="email_infoText" class="col-md-6 input-group">
+								<!-- dynamic error messemail here -->
+							</div>			
+						</div>
+
+					</div>
+					<!-- ================================================================= -->
+					<hr>
+					<div class="form-group" id="form-group-login">
+					  <label class="col-md-4 control-label" for="textinput">Login</label>  
+					  <div class="col-md-6 input-group">
+							<span class="input-group-addon">
+								<span class="glyphicon glyphicon-user"></span>
+							</span>
+							<input id="i_login" name="login" type="text" placeholder="login" class="form-control input-md">
+							<span id="s_login-WarningGlyph"><!-- glyphicon here --></span>
+					  </div>
+
+					<!-- show messlogin structure if login is not acceptable-->
+					<div id="login-infoContainer" class="">
+						<div class='col-md-4'></div>
+						<div id="login_infoText" class="col-md-6 input-group">
+							<!-- dynamic error messlogin here -->
+						</div>			
+					</div>
+
+					</div>					
+					<!-- ================================================================= -->
+					<div class="form-group" id="form-group-password">
+					  <label class="col-md-4 control-label" for="passwordinput">Password</label>
+					  <div class="col-md-6 input-group">
+					  	<span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+					    <input id="i_password" name="password" type="password" placeholder="password" class="form-control input-md ">
+					    <span id="s_password-WarningGlyph"><!-- glyphicon here --></span>  
+					  </div>
+
+						<!-- show messpassword structure if password is not acceptable-->
+						<div id="password-infoContainer" class="">
+							<div class='col-md-4'></div>	
+							<div id="password_infoText" class="col-md-6 input-group">
+								<!-- dynamic error messpassword here -->
+							</div>		
+						</div>
+
+					</div>
+					
+					<!-- ================================================================= -->
+					<div class="form-group" id="form-group-confirmPassword">
+					  <label class="col-md-4 control-label" for="passwordinput2">Confirm password</label>
+					  <div class="col-md-6 input-group">
+					  	<span class="input-group-addon">
+								<span class="glyphicon glyphicon-lock"></span>
+							</span>
+					    <input id="i_passwordConfirm" name="password" type="password" placeholder="Confirm password" class="form-control input-md" />
+					    <span id="s_confirmPassword-WarningGlyph"><!-- glyphicon here --></span>	
+					  </div>	
+
+						<!-- show messpasswordConfirm structure if passwordConfirm is not acceptable-->
+						<div id="passwordConfirm-infoContainer" class="form-group">
+							<div class='col-md-4'></div>
+							<div id="passwordConfirm_infoText" class="col-md-6 input-group">
+								<!-- dynamic error messpasswordConfirm here -->
+							</div>			
+						</div>
+
+					</div>
+				</fieldset>
+			</form>		
+			</div><!-- modal body-->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button id="createAccButt" type="button" form="createAccForm" class="btn btn-primary">Create account</button>
+      </div>
+		</div>
+		</div>
+</div><!--create account modal fade end-->
+<!-- ========================================================= -->
+	</div>
+
+
+<div class="jumbotron" id="test">
+  <div class="container" id="jumbCont">
+    <h1 class="myTitle">My TO DO application</h1>
+  <div  class="my_blacquote-reverse">
+  <p><q>If you wish to forget anything on the spot, make a note that this thing is to be remembered.</q></p>
+  <footer>Edgar Allan Poe </footer>
+	</div >
+  <p><a class="btn btn-success myButton" href="#" role="button" data-toggle="modal" data-target="#myLoginModal">I want to login</a></p>
+  <p><a class="btn btn-primary btn-sm" id='b_createAcc' href="#" role="button" data-toggle="modal" data-target="#myAccCreatenModal">I want to create account</a></p>
+  </div>
+</div><!-- jumbotron -->
+		<script src="js/bundle.js"></script>
+</body>
+</html>

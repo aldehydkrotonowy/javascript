@@ -1,0 +1,97 @@
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../../node_modules/perfect-scrollbar/css/perfect-scrollbar.css";
+@import "../../node_modules/slick-carousel/slick/slick.css";
+@import "../../node_modules/slick-carousel/slick/slick-theme.css";
+@import "utils/colors";
+@import "utils/functions";
+@import "utils/fonts";
+@import "utils/icons";
+@import "components/wh-nav";
+@import "components/wh-hero";
+@import "components/wh-slides";
+@import "components/wh-footer";
+@import "components/wh-big-article-tile";
+@import "components/wh-betslip";
+
+.preload * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+}
+
+#content{
+  transition: transform 300ms ease-out;
+  background: white;
+  position: relative;
+}
+
+p{
+  margin: 0;
+}
+html,body{
+  width:100%;
+  overflow-x:hidden;
+  font-family: WHHoxton;
+}
+button,input[type='button'] {
+  font-weight: bold;
+  font-family: WHHoxton;
+}
+.ps__rail-x{
+  top:auto !important;
+  bottom: 0;
+}
+
+.ps__rail-y{
+  left: auto !important;
+  right: 0;
+}
+
+.slick-prev {
+  left: 0;
+  height: 100%;
+  width: 80px;
+  &:before{
+    content: "";
+  }
+  &:focus{
+    background: linear-gradient(to right, #ffffff , transparent);
+  }
+  &:hover{
+    background: linear-gradient(to right, #ffffff , transparent);
+  }
+  background: linear-gradient(to right, #ffffff , transparent);
+  z-index: 500;
+}
+.slick-next {
+  &:before{
+    content: "";
+  }
+  right: 0;
+  height: 100%;
+  width: 80px;
+  &:focus{
+    background: linear-gradient(to left, #ffffff , transparent);
+  }
+  &:hover{
+    background: linear-gradient(to left, #ffffff , transparent);
+  }
+  background: linear-gradient(to left, #ffffff , transparent);
+  z-index: 500;
+}
+
+/* the slides */
+.slick-slide {
+
+}
+
+/* the parent */
+.slick-list {
+
+}
+
+.slick-disabled {
+  opacity: 0;
+  pointer-events:none;
+}

@@ -1,0 +1,41 @@
+@import 'styleutils/colors.scss';
+
+%button-basic {
+    border: 0;
+    background: linear-gradient( $gradient-bottom, $gradient-top);
+    padding: 11px 40px;
+    border-radius: 0px;
+    box-shadow: rgba(0,0,0,1) 0 1px 0;
+    text-shadow: rgba(0,0,0,.4) 0 1px 0;
+    color: white;
+    font-size: 1.3em;
+    font-family: Helvetica, Arial, Sans-Serif;
+    text-decoration: none;
+    vertical-align: middle;
+    &:hover {
+        border-top-color: #b01111;
+        background: #b01111;
+        color: white;
+        cursor: pointer;
+    }
+}
+
+
+%button-secondary {
+    border: 0;
+    background: #aaa;
+    padding: 11px 40px;
+    border-radius: 0px;
+    box-shadow: rgba(0,0,0,1) 0 1px 0;
+    text-shadow: rgba(0,0,0,.4) 0 1px 0;
+    color: black;
+    font-size: 1.3em;
+    font-family: Helvetica, Arial, Sans-Serif;
+    text-decoration: none;
+    vertical-align: middle;
+    &:hover {
+        background: #ff0000;
+        color: white;
+        cursor: pointer;
+    }
+}

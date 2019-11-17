@@ -1,0 +1,132 @@
+#betslip{
+
+  @media only screen and (max-width: 992px) {
+    width: 100%;
+    visibility: hidden;
+    transform: translateX(0) translateY(-41px);
+    height: calc(100vh - 55px);
+    background: white;
+    overflow-y: auto;
+    transition: none;
+  }
+
+  width: 373px;
+  position: fixed;
+  right: 0;
+  top: 96px;
+  z-index: 999;
+  transition: transform 400ms ease-in-out;
+  transform: translateX(320px);
+  .main-tab{
+    position: relative;
+    cursor: pointer;
+    top:40px;
+    width: 53px;
+    height: 107px;
+    background-color: #122853;
+    .text{
+      position: absolute;
+      font-size: 18px;
+      color: white;
+      transform: rotate(-90deg);
+      bottom: 30px;
+    }
+    .count{
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: auto;
+      border-radius: 2px;
+      width: 16px;
+      padding-left: 5px;
+      top:12px;
+      background-color: #ff0a28;
+      font-size: 14px;
+      color: white;
+      transform: rotate(-90deg);
+    }
+  }
+  .content{
+    @media only screen and (max-width: 992px) {
+      width: 100vw;
+      position: relative;
+      left: 0;
+    }
+    position: relative;
+    left: 53px;
+    top: -107px;
+    width: 320px;
+    .header{
+      height: 40px;
+      background-color: #122853;
+      span{
+        color: #fff;
+        font-size: 12px;
+        float: right;
+      }
+    }
+    .main{
+      .tabs{
+        display: flex;
+        .tab{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          width: 50%;
+          height: 47px;
+          background-color: #EBF1FF;
+          .text{
+            font-size: 14px;
+          }
+          &.active{
+            background: white;
+          }
+        }
+      }
+      .betslip{
+        background: white;
+        .singles{
+          margin-left: 8px;
+        }
+        .with-close{
+          background-color: #EBF1FF;
+          margin: 8px;
+          padding: 8px;
+          input{
+            width: 80px;
+          }
+        }
+        .stake{
+          margin: 8px;
+          padding: 8px;
+          .text{
+
+          }
+          .count{
+            float: right;
+          }
+          button{
+            display: block;
+            width: 100%;
+          }
+        }
+        .clear-betslip{
+          background-color: #EBF1FF;
+          padding-top: 20px;
+          padding-bottom: 8px;
+          text-align: center;
+          .clear{
+           margin-top: 20px;
+            margin-bottom: 20px;
+          }
+          p{
+            margin-top: 10px;
+            line-height: 1.2;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}

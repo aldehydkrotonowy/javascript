@@ -1,0 +1,119 @@
+@import 'styleutils/colors.scss';
+@import 'styleutils/button.scss';
+
+
+
+%leading {
+    font-family: 'Open Sans', sans-serif;
+    height: 12em;
+    padding: 2em;
+    color: $basic-font-color;
+    text-shadow: 0px 0px 5px #000;
+    background: url('/images/pexels-photo-207700.jpeg') center rgb(209, 29, 29) no-repeat;
+    background-size: cover;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+%hugeButton {
+    @extend %button-basic;
+    grid-row: 2/3;
+    justify-self: center;
+    border-top: 1px solid #474747;
+    padding: 11px 22px;
+    font-size: 4em;
+}
+%description{
+    grid-row: 3/4;
+    padding: 0.5em;
+    justify-self: center;
+    font-size: 1.2em;
+
+}
+
+
+
+// ---------------------------------------- breakpoint desktop 
+.leading {
+    @extend %leading;
+}
+.hugeButton {
+    @extend %hugeButton;
+}
+.description {
+    @extend %description;
+}
+
+
+
+// ---------------------------------------- breakpoint tablet
+.leading {
+    @extend %leading;
+}
+.hugeButton {
+    @extend %hugeButton;
+}
+.description {
+    @extend %description;
+}
+
+
+
+// ---------------------------------------- breakpoint phone
+.leadingPhone {
+    @extend %leading;
+    padding: 1em 1em;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+.hugeButtonPhone {
+    @extend %hugeButton;
+    font-size: 3em;
+}
+.description-phone {
+    @extend %description;
+}
+
+
+
+.enterLogin {
+    opacity: 0.01;
+    transform: scale(1) translateY(100%);
+}
+
+.enterLoginActive{
+    opacity: 1;
+    transform: scale(1) translateY(0%);
+    transition: all 500ms ease-out;
+}
+
+.exitLogin {
+    opacity: 1;
+}
+
+.exitLoginActive {
+    opacity: 0.01;
+    transform: scale(1) translateY(100%);
+    transition: all 500ms ease-out;
+}
+
+
+
+.enterNewAccount {
+    opacity: 0.01;
+    transform: scale(1) translateY(-100%);
+}
+.enterNewAccountActive {
+    opacity: 1;
+    transform: scale(1) translateY(0%);
+    transition: all 500ms ease-out;
+}
+.exitNewAccount {
+    opacity: 1;
+}
+.exitNewAccountActive {
+    opacity: 0.01;
+    transform: scale(1) translateY(-100%);
+    transition: all 500ms ease-out;
+}

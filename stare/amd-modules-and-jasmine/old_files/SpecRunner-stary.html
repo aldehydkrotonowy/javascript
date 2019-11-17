@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+    <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Jasmine Spec Runner v2.0.0</title>
+
+      <link rel="shortcut icon" type="image/png" href="src/vendors/jasmine-2.5.2/lib/jasmine-2.5.2/jasmine_favicon.png">
+      <link rel="stylesheet" type="text/css" href="src/vendors/jasmine-2.5.2/lib/jasmine-2.5.2/jasmine.css">
+
+      <!-- 
+      Notice that I just load Jasmine normally
+      -->    
+      <script type="text/javascript" src="src/vendors/jasmine-2.5.2/lib/jasmine-2.5.2/jasmine.js"></script>
+      <script type="text/javascript" src="src/vendors/jasmine-2.5.2/lib/jasmine-2.5.2/jasmine-html.js"></script>
+      <script type="text/javascript" src="src/vendors/jasmine-2.5.2/lib/jasmine-2.5.2/boot.js"></script>
+
+      <!-- 
+      Here we load require.js but we do not use data-main. Instead we will load the
+      the specs separately. In short we need to load the spec files synchronously for this
+      to work.
+      -->
+      <script type="text/javascript" src="src/vendors/require-2.3.2/require.js"></script>
+
+      <!-- 
+      I put my require js config inline for simplicity
+      -->
+        <script type="text/javascript">
+        require.config({
+          baseUrl: 'js',
+          shim: {
+              //'underscore': { exports: '_'},
+              //'react': { exports: 'React' }
+          },
+          paths: {
+              spec: 'src/spec/'
+              //jquery: 'vendor/jquery.min',
+              //underscore: 'vendor/underscore.min',
+              //react: 'vendor/react.min'
+          }
+        });
+        require('src/spec/notepadSpec', function (spec) {
+            var jasmineEnv = jasmine.getEnv();
+            jasmineEnv.updateInterval = 1000;
+            var htmlReporter = new jasmine.HtmlReporter();
+            jasmineEnv.addReporter(htmlReporter);
+            jasmineEnv.specFilter = function (spec) {
+                return htmlReporter.specFilter(spec);
+            };
+            jasmineEnv.execute();
+        });
+      </script>
+
+  <!-- 
+  I put my spec files here
+ <script type="text/javascript" src="src/spec/notepadSpec.js"></script>
+  --> 
+    </head>
+
+    <body>
+    </body>
+</html>

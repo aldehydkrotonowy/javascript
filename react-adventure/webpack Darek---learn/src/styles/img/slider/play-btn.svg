@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48" height="48" viewBox="0 0 48 48">
+    <defs>
+        <path id="a" d="M18 14l16 10-16 10z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <circle cx="24" cy="24" r="24" fill="#00ADFF" fill-opacity=".8"/>
+        <g fill-rule="nonzero">
+            <use fill="#FFF" fill-rule="evenodd" xlink:href="#a"/>
+            <path stroke="#FFF" d="M18.5 14.902v18.196L33.057 24 18.5 14.902z"/>
+        </g>
+    </g>
+</svg>

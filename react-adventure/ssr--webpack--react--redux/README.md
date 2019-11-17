@@ -1,0 +1,1 @@
+webpack, react, redux, express ssr setup with scss, eslint and babel

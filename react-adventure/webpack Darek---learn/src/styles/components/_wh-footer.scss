@@ -1,0 +1,259 @@
+
+.footer-main {
+    position: relative;
+    font-size: 11px;
+    transition: transform .15s ease-out;
+    width: 100%;
+    background-color: #122853;
+    .footer-back-to-top-wrapper {
+        clear: both;
+        #footer-btn-backtotop {
+            display:  inline-block;
+            padding: 6px;
+            padding-top: 8px;
+            cursor: pointer;
+        }
+        .button-back-to-top {
+            color: #fff;
+            text-align: center;
+            line-height: 1.2em;
+            vertical-align: middle;
+        }
+    }
+    .footer-wrapper {
+        color: #fff;
+        overflow: hidden;
+        padding: 16px 6px 64px;
+        margin: 0 auto;
+        max-width: 1440px;
+        > section {
+            float: left;
+            &.leftPanel {
+                width: 100%;
+                .languageSelectionToggle {
+                    color: #fff;
+                    line-height: 1.4em;
+                    text-decoration: none;
+                }
+            }
+            .footer-clock {
+                letter-spacing: 1px;
+                display: inline-block;
+                color: color(yellow);
+            }
+        }
+    }
+    a {
+        display: inline-block;
+        font-weight: 400;
+        color: #faff05;
+        &:active, &:focus, &:hover {
+            color: #faff05;
+        }
+    }
+    .respGambling {
+        margin-bottom: 1.35em;
+    }
+    .copyright {
+        margin-bottom: 10px;
+        margin-top: 20px;
+        width: 304px;
+        height: 12px;
+        overflow: hidden;
+        > a {
+            text-decoration: none;
+        }
+    }
+    .links {
+        margin: 0 auto 2.13333em;
+        padding-left: 0;
+
+        li {
+            border-bottom: 1px dotted #fff;
+            display: inline-block;
+            width: 47%;
+            margin-bottom: 24px;
+            margin-right: 8px;
+            &.-hidden-functionality {
+                + li, ~ li:last-child {
+                    margin-right: 0;
+                }
+            }
+            a {
+                display: inline-block;
+                padding-bottom: 4px;
+                width: 100%;
+                text-decoration: none !important;
+                color: #fff;
+                &:hover {
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+    .footer-cookies {
+        margin-top: 1em;
+    }
+    .footer-cookies-text {
+        margin-bottom: 1em;
+        a {
+            color: color(yellow);
+        }
+    }
+    .footer-cookies-header {
+        text-align: center;
+    }
+    .crest-sprite {
+        padding-left: 4.8em;
+        width: auto;
+        display: inline-block;
+        position: relative;
+        .crest-sprite-b4 {
+            background-position: -72px -202px;
+            width: 40px;
+            height: 45px;
+            content: "";
+            display: block;
+            position: absolute;
+            left: 0;
+        }
+        p {
+            margin-bottom: 1em;
+        }
+    }
+    .inlineList {
+        font-size: 16px;
+        padding-left: 0;
+
+        li {
+            display: inline-block;
+            margin-right: 0.7em;
+        }
+        &.paymentMethods li {
+            display: inline-block;
+            margin-bottom: .53333em;
+            margin-right: 0.53333em;
+            i {
+                border-radius: 4px;
+                background-color: #fff;
+                display: block;
+                height: 32px;
+                width: 56px;
+                &.visa-sprite {
+                    background-image: url('/img/footer/spritesheet.png');
+                    background-position: -168px -202px;
+                    width: 56px;
+                    height: 32px;
+                }
+                &.mastercard-sprite {
+                    background-image: url('/img/footer/spritesheet.png');
+                    background-position: -112px -202px;
+                    width: 56px;
+                    height: 32px;
+                }
+                &.maestro-sprite {
+                    background-image: url('/img/footer/spritesheet.png');
+                    background-position: -296px -144px;
+                    width: 56px;
+                    height: 32px;
+                }
+                &.paypal-sprite {
+                    background-image: url('/img/footer/spritesheet.png');
+                    background-position: -296px -112px;
+                    width: 64px;
+                    height: 32px;
+                }
+                &.skrill-sprite {
+                    background-image: url('/img/footer/spritesheet.png');
+                    background-position: -224px -202px;
+                    width: 52px;
+                    height: 32px;
+                }
+            }
+        }
+        a {
+            font-size: 1.5em;
+            text-decoration: none !important;
+            color: #fff;
+        }
+    }
+    .gambling-links {
+        .icon-and-over {
+            position: relative; top: 5px;
+            display: inline-block;
+            width: 30px; height: 31px;
+            background-image: url('/img/footer/18plus.svg');
+        }
+        .icon-gamble-aware {
+            position: relative; top: 5px;
+            display: inline-block;
+            width: 200px; height: 30px;
+            background-image: url('/img/footer/gambleaware.svg');
+        }
+        .icon-gamblers-anonymous {
+            position: relative; top: 5px;
+            display: inline-block;
+            width: 45px; height: 30px;
+            background-image: url('/img/footer/GA.svg');
+        }
+        .icon-gambling-therapy {
+            position: relative; top: 5px;
+            display: inline-block;
+            width: 36px; height: 30px;
+            background-image: url('/img/footer/gt.svg');
+        }
+        .icon-responsible-gambling-trust {
+            position: relative; top: 5px;
+            display: inline-block;
+            width: 128px; height: 30px;
+            background-image: url('/img/footer/responsible.svg');
+        }
+        .icon-gbga {
+            position: relative; top: 5px;
+            display: inline-block;
+            width: 80px; height: 30px;
+            background-image: url('/img/footer/GBGA.svg');
+        }
+        .whenthefunstops-sprite {
+            background-image: url('/img/footer/spritesheet.png');
+            background-position: -80px -176px;
+            width: 186px;
+            height: 24px;
+            display: block;
+        }
+    }
+
+    .button-back-to-top {
+        transition: background-color .25s linear;
+        background-color: #00143c;
+        color: #fff;
+        &:hover {
+            background-color: #000d28
+        }
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+    .footer-main .footer-wrapper > section.leftPanel {
+        width: 40%;
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+    .footer-main .footer-wrapper > section.rightPanel {
+        padding-left: 1em;
+        width: 60%;
+    }
+}
+
+@media only screen and (min-width: 68.33333rem) {
+    .footer-main .links li.-hidden-functionality ~ li:nth-of-type(2n) {
+        margin-right: 0;
+    }
+}
+
+@media only screen and (min-width: 68.33333rem) {
+    .footer-main .links li.-hidden-functionality + li {
+        margin-right: 8px;
+    }
+}

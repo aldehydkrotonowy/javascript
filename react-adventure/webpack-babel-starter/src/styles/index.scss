@@ -1,0 +1,10 @@
+@import 'custom.scss';
+
+// overide bootstrap defaults
+$body-bg: rgb(187, 54, 54);
+$body-color: rgb(77, 94, 138);
+
+// @import "~bootstrap/dist/css/bootstrap";
+
+// Include all of Bootstrap
+@import "node_modules/bootstrap/scss/bootstrap";
