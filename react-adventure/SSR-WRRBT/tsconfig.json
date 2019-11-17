@@ -1,0 +1,30 @@
+{
+	"compilerOptions": {
+		"moduleResolution": "node",
+		"outDir": "./build/",
+		"sourceMap": true,
+		// "noImplicitAny": true,
+		"esModuleInterop": true,
+		"noEmit": true,
+		"module": "es6", //"commonjs",
+		"target": "esnext",
+		"jsx": "react",
+		"typeRoots": [
+			"./typings/*",
+			"node_modules/@types"
+		],
+		"baseUrl": ".",
+		"paths": {
+			"*": [
+				"./typings/*",
+			]
+		}
+	},
+	"include": [
+		"./src/**/*",
+		"./typings/*",
+	],
+	"exclude": [
+		"./build/*"
+	]
+}

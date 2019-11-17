@@ -1,0 +1,63 @@
+{
+	"name": "ssr-wrrbt",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"start:dev:once": "webpack --env.NODE_ENV=development --display-modules --progress --config ./webpack.config.babel.ts --mode production",
+		"start:dev:watch": "webpack --env.NODE_ENV=development --display-modules --progress --config ./webpack.config.babel.ts --mode production --watch",
+		"server:start": "nodemon build/server/server.js",
+		"test": "jest"
+	},
+	"author": "norbert gajda",
+	"license": "ISC",
+	"dependencies": {
+		"@types/react": "^16.8.13",
+		"@types/react-dom": "^16.8.4",
+		"@types/react-test-renderer": "^16.8.1",
+		"express": "^4.16.4",
+		"react": "^16.8.6",
+		"react-dom": "^16.8.6",
+		"react-redux": "^7.0.2",
+		"react-test-renderer": "^16.8.6",
+		"redux": "^4.0.1",
+		"styled-components": "^4.2.0"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.4.3",
+		"@babel/plugin-proposal-class-properties": "^7.4.0",
+		"@babel/plugin-proposal-object-rest-spread": "^7.4.3",
+		"@babel/preset-env": "^7.4.3",
+		"@babel/preset-react": "^7.0.0",
+		"@babel/preset-typescript": "^7.3.3",
+		"@babel/register": "^7.4.0",
+		"@types/express": "^4.16.1",
+		"@types/jest": "^24.0.13",
+		"@types/react-redux": "^7.0.6",
+		"awesome-typescript-loader": "^5.2.1",
+		"babel-loader": "^8.0.5",
+		"clean-webpack-plugin": "^2.0.1",
+		"colors": "^1.3.3",
+		"copy-webpack-plugin": "^5.0.2",
+		"dotenv": "^7.0.0",
+		"file-loader": "^3.0.1",
+		"jest": "^24.8.0",
+		"postcss-loader": "^3.0.0",
+		"sass-loader": "^7.1.0",
+		"source-map-loader": "^0.2.4",
+		"style-loader": "^0.23.1",
+		"typescript": "^3.4.3",
+		"url-loader": "^1.1.2",
+		"webpack": "^4.29.6",
+		"webpack-clean": "^1.2.3",
+		"webpack-cli": "^3.3.0",
+		"webpack-dev-server": "^3.3.1",
+		"webpack-node-externals": "^1.7.2"
+	},
+	"jest": {
+		"moduleNameMapper": {
+			"\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/mocks/fileMock.js",
+			"\\.(css|less)$": "<rootDir>/mocks/styleMock.js"
+		}
+	}
+}

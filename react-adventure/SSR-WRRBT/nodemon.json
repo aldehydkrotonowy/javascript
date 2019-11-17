@@ -1,0 +1,8 @@
+{
+	"ignore": [
+		"webpack.config.babel.js",
+		".git/",
+		"./build/*"
+	],
+	"verbose": true
+}
